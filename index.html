@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShop Client</title>
+</head>
+
+<body>
+    <section id="app">
+        <div>
+            <p>Ejercicio 1</p>
+            {{ message }}
+        </div>
+
+        <div>
+            <p>Ejercicio 2</p>
+
+            <span :title="spanTitle">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+            </span>
+        </div>
+
+        <div>
+            <p>Ejercicio 3</p>
+
+            <span v-show="seen">Now you see me</span>
+        </div>
+
+        <div>
+            <p>Ejercicio 4</p>
+
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div>
+            <p>Ejercicio 5</p>
+
+            <p>{{ message }}</p>
+            <button @click="reverseMessage">Reverse Message</button>
+        </div>
+
+        <div>
+            <p>Ejercicio 6</p>
+
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+
+        <div>
+            <p>Ejercicio 7</p>
+
+            <todo-item v-for="item in groceryList" :todo="item" :key="item.id"></todo-item>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./index.js"> </script>
+</body>
+
+</html>
